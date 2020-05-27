@@ -1,6 +1,9 @@
 # Jar files: for compliance with EULA (do not distribute) and because binary
 *.jar
 
+# EULA file (must be changed manually after generation by server jar)
+/eula.txt
+
 # World directories
 /world/
 /world_*/
