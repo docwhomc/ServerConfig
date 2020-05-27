@@ -1,0 +1,22 @@
+# Jar files: for compliance with EULA (do not distribute) and because binary
+*.jar
+
+# World directories
+/world/
+/world_*/
+
+# Server logs
+/logs/
+
+# Database files
+*.db
+
+# Database backup files
+*.db.bak
+
+# Json files
+*.json
+
+# Bakcups
+*.db.bak
+backup/
