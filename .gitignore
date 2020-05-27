@@ -26,9 +26,11 @@ flatfile/
 
 # Data directories
 data/
+userdata/
 
 # Player maps
 playermap.yml
+usermap.csv
 
 # Bakcups
 *.db.bak
