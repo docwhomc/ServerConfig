@@ -8,8 +8,9 @@
 /world/
 /world_*/
 
-# Server logs
-/logs/
+# Logs
+logs/
+*.log
 
 # Database files
 *.db
@@ -22,6 +23,12 @@
 
 # Flat file directories
 flatfile/
+
+# Data directories
+data/
+
+# Player maps
+playermap.yml
 
 # Bakcups
 *.db.bak
