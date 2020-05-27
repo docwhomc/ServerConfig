@@ -37,7 +37,7 @@ rollback-items: true
 rollback-entities: true
 
 # If enabled, generic data, like zombies burning in daylight, won't be logged.
-skip-generic-data: true
+skip-generic-data: false
 
 # Logs blocks placed by players.
 block-place: true
