@@ -11,7 +11,7 @@ currency:
     plural: Emeralds
 
   # number of decimal digits supported by currency value (0 for whole numbers only)
-  digits: 2
+  digits: 0
 
   # Display account balances with individual denomination names
   named-denominations: false
