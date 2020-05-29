@@ -28,6 +28,9 @@ flatfile/
 data/
 userdata/
 
+# Karma data
+karma.yml
+
 # Player maps
 playermap.yml
 usermap.csv

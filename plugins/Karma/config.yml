@@ -1,0 +1,65 @@
+#DO NOT CHANGE ANY OF THESE
+#-------------------------------------
+version: 2.0
+#-------------------------------------
+
+#Can Be:
+#  file - karma.yml
+#  mysql - MySQL database (NOT TESTED! DO NOT USE)
+#Database
+storagemethod: file
+mysql:
+  address: localhost
+  database: minecraft
+  username: root
+  password: password
+
+#Can Be:
+#  vanilla - Vanilla scoreboard
+#  vault - Group based scoreboard. Specify permission groups for each group below (NOT TESTED! DO NOT USE)
+scoreboardmethod: vanilla
+
+scoreboardgroups:
+  red:
+  yellow:
+  neutral:
+  green:
+
+prefix: "[Karma]"
+
+defaultkarma: 0
+#Specify the levels of each karma
+karmalevels:
+  #Less than or equal to
+  red: -2
+  #Range (Use ~ the way you would use a dash)
+  neutral: -1~1
+  #Greater than or equal to
+  green: 2
+
+maxkarmalevels:
+  enabled: false
+  max:
+  min:
+
+karmachanges:
+  #killer
+  red:
+    #killed
+    red: 1
+    neutral: -1
+    green: -2
+  neutral:
+    red: 1
+    neutral: -1
+    green: -2
+  green:
+    red: 1
+    neutral: -1
+    green: -2
+
+#Makes players yellow if they damage another player but don't kill them
+yellowplayers:
+  enabled: true
+  #In Seconds
+  duration: 60
