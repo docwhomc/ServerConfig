@@ -1,8 +1,8 @@
 version:
   # This is the current version of Towny.  Please do not edit.
-  version: 0.96.1.0
+  version: 0.96.1.11
   # This is for showing the changelog on updates.  Please do not edit.
-  last_run_version: 0.96.1.0
+  last_run_version: 0.96.1.11
 # The language file you wish to use
 language: english.yml
  
@@ -224,11 +224,17 @@ town:
   # Maximum number of towns allowed on the server.
   town_limit: '3000'
  
+  # If true, the below settings: min_plot_distance_from_town_plot and min_distance_from_town_homeblock
+  # will be ignored for towns that are in the same nation. Setting to false will keep all towns separated the same.
+  min_distances_ignored_for_towns_in_same_nation: 'true'
+ 
   # Minimum number of plots any towns plot must be from the next town's own plots.
+  # Does not affect towns which are in the same nation.
   # This will prevent town encasement to a certain degree.
   min_plot_distance_from_town_plot: '5'
  
   # Minimum number of plots any towns home plot must be from the next town.
+  # Does not affect towns which are in the same nation.
   # This will prevent someone founding a town right on your doorstep
   min_distance_from_town_homeblock: '5'
  
@@ -392,8 +398,14 @@ global_town_settings:
   is_nation_ally_spawning_requiring_public_status: 'false'
   # If non zero it delays any spawn request by x seconds.
   teleport_warmup_time: '0'
+  # When set to true, if players are currently in a spawn warmup, moving will cancel their spawn.
+  movement_cancels_spawn_warmup: 'false'
+  # When set to true, if players are damaged in any way while in a spawn warmup, their spawning will be cancelled.
+  damage_cancels_spawn_warmup: 'false'
   # Number of seconds that must pass before a player can use /t spawn or /res spawn.
   spawn_cooldown_time: '30'
+  # Decides whether confirmations should appear if you spawn to an area with an associated cost.
+  spawn_warnings: 'true'
   # Number of seconds that must pass before pvp can be toggled by a town.
   # Applies to residents of the town using /res toggle pvp, as well as
   # plots having their PVP toggled using /plot toggle pvp.
@@ -408,6 +420,10 @@ global_town_settings:
   # Enables the [~Home] message.
   # If false it will make it harder for enemies to find the home block during a war
   show_town_notifications: 'true'
+  # When set above zero this is the largest number of residents a town can support before they join/create a nation.
+  # Do not set this value to an amount less than the required_number_residents_join_nation below.
+  # Do not set this value to an amount less than the required_number_residents_create_nation below.
+  maximum_number_residents_without_nation: '0'
   # The required number of residents in a town to join a nation
   # If the number is 0, towns will not require a certain amount of residents to join a nation
   required_number_residents_join_nation: '0'
@@ -433,6 +449,7 @@ global_town_settings:
   # When active this feature can cause a bit of lag when the /t toggle pvp command is used, depending on how many players are online.
   outsiders_prevent_pvp_toggle: 'false'
   # If set to true, when a world has forcepvp set to true, homeblocks of towns will not be affected and have PVP set to off.
+  # Does not have any effect when Event War is active.
   homeblocks_prevent_forcepvp: 'false'
   # The amount of residents a town needs to claim an outpost,
   # Setting this value to 0, means a town can claim outposts no matter how many residents
@@ -450,6 +467,9 @@ global_town_settings:
   display_xyz_instead_of_towny_coords: 'false'
   # If set to true the /town list command will list randomly, rather than by whichever comparator is used, hiding resident counts.
   display_town_list_randomly: 'false'
+  # The ranks to be given preference when assigning a new mayor, listed in order of descending preference.  All ranks should be as defined in `townyperms.yml`.
+  # For example, to give a `visemayor` preference over an `assistant`, change this parameter to `visemayor,assistant`.
+  order_of_mayoral_succession: assistant
  
  
   ############################################################
@@ -511,6 +531,9 @@ global_nation_settings:
     public: 'false'
     # If set to true, any newly made nation will have open status and any town may join without an invite.
     open: 'false'
+  # This setting determines the list of allowed nation map colors.
+  # The color codes are in hex format.
+  allowed_map_colors: aqua:00ffff, azure:f0ffff, beige:f5f5dc, black:000000, blue:0000ff, brown:a52a2a, cyan:00ffff, darkblue:00008b, darkcyan:008b8b, darkgrey:a9a9a9, darkgreen:006400, darkkhaki:bdb76b, darkmagenta:8b008b, darkolivegreen:556b2f, darkorange:ff8c00, darkorchid:9932cc, darkred:8b0000, darksalmon:e9967a, darkviolet:9400d3, fuchsia:ff00ff, gold:ffd700, green:008000, indigo:4b0082, khaki:f0e68c, lightblue:add8e6, lightcyan:e0ffff, lightgreen:90ee90, lightgrey:d3d3d3, lightpink:ffb6c1, lightyellow:ffffe0, lime:00ff00, magenta:ff00ff, maroon:800000, navy:000080, olive:808000, orange:ffa500, pink:ffc0cb, purple:800080, violet:800080, red:ff0000, silver:c0c0c0, white:ffffff, yellow:ffff00
  
  
   ############################################################
@@ -565,6 +588,8 @@ plugin:
     # The time each "day", when taxes will be collected.
     # MUST be less than day_interval. Default is 12h (midday).
     new_day_time: 12h
+    # Whether towns with no claimed townblocks should be deleted when the new day is run.
+    delete_0_plot_towns: 'false'
  
   # Lots of messages to tell you what's going on in the server with time taken for events.
   debug_mode: 'false'
@@ -939,13 +964,13 @@ economy:
   nation_rename_cost: '0'
  
   spawn_travel:
-    # Cost to use /town spawn
+    # Cost to use /town spawn.
     price_town_spawn_travel: '0.0'
     # Cost to use '/town spawn [town]' to another town in your nation.
     price_town_nation_spawn_travel: '5.0'
     # Cost to use '/town spawn [town]' to another town in a nation that is allied with your nation.
     price_town_ally_spawn_travel: '10.0'
-    # Cost to use /town spawn [town]
+    # Maximum cost to use /town spawn [town] that mayors can set using /t set spawncost.
     # This is paid to the town you goto.
     price_town_public_spawn_travel: '10.0'
     # When set to true, any cost paid by a player to use any variant of '/town spawn' will be paid to the town bank.
@@ -1020,10 +1045,16 @@ economy:
     # if a resident can't pay his town tax then he is kicked from the town.
     # if a town or nation fails to pay it's upkeep it is deleted.
     enabled: 'true'
-    # Maximum tax amount allowed when using flat taxes
-    max_tax_amount: '1000.0'
-    # maximum tax percentage allowed when taxing by percentages
-    max_tax_percent: '25'
+    # Maximum tax amount allowed for townblocks sold to players.
+    max_plot_tax_amount: '1000.0'
+    # Maximum tax amount allowed for towns when using flat taxes.
+    max_town_tax_amount: '1000.0'
+    # Maximum tax amount allowed for nations when using flat taxes.
+    max_nation_tax_amount: '1000.0'
+    # Maximum tax percentage allowed when taxing by percentages for towns.
+    max_town_tax_percent: '25'
+    # The maximum amount of money that can be taken from a balance when using a percent tax, this is the default for all new towns.
+    max_town_tax_percent_amount: '10000'
     # The server's daily charge on each nation. If a nation fails to pay this upkeep
     # all of it's member town are kicked and the Nation is removed.
     price_nation_upkeep: '100.0'
@@ -1181,6 +1212,7 @@ war:
       firework_on_attacked: 'true'
  
     # If true and the monarch/king dies the nation is removed from the war.
+    # Also removes a town from the war event when the mayor dies.
     remove_on_monarch_death: 'false'
     # If enabled players will be able to break/place any blocks in enemy plots during a war.
     # This setting SHOULD NOT BE USED unless you want the most chaotic war possible.
