@@ -10,6 +10,7 @@
 
 # The 'nomad' permission set covers players not in any town
 nomad:
+    - towny.wild.*
     - towny.command.towny.map
     - towny.command.towny.prices
     - towny.command.towny.tree
