@@ -65,6 +65,18 @@ towns:
     ranks:
         # Ranks contain additional permissions residents will be
         # granted if they are assigned that specific rank.
+        visemayor:
+            - towny.tax_exempt
+            - towny.command.town.claim.*
+            - towny.command.town.invite.add
+            - towny.command.plot.*
+            - towny.command.town.toggle.public
+            - towny.claimed.owntown.switch.*
+            # visemayors are able to grant assistant, VIP, and helper rank
+            - towny.command.town.rank.assistant
+            - towny.command.town.rank.vip
+            - towny.command.town.rank.helper
+            - towny.outlaw.jailer
         assistant:
             - towny.tax_exempt
             - towny.command.town.claim.*
