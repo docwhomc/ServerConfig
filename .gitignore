@@ -18,6 +18,9 @@ logs/
 # Database backup files
 *.db.bak
 
+# Database journal files
+*.db-journal
+
 # Json files
 *.json
 
