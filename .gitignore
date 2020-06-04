@@ -38,3 +38,9 @@ usermap.csv
 # Bakcups
 *.db.bak
 backup/
+
+##################
+# Exempted files #
+##################
+
+!/plugins/LuckPerms/contexts.json
