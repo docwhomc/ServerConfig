@@ -5,6 +5,8 @@
 /eula.txt
 
 # World directories
+/earth/
+/hub/
 /world/
 /world_*/
 
