@@ -1,6 +1,6 @@
 cfg-version: 11
 message: '&cYou have reached the edge of this world.'
-round-border: true
+round-border: false
 debug-mode: false
 whoosh-effect: true
 portal-redirection: true
@@ -18,3 +18,20 @@ bypass-list-uuids: []
 fill-memory-tolerance: 500
 prevent-block-place: false
 prevent-mob-spawn: false
+fillTask:
+  world: earth
+  fillDistance: 0
+  chunksPerRun: 5
+  tickFrequency: 1
+  x: -27
+  z: 28
+  length: 56
+  total: 3138
+  forceLoad: true
+worlds:
+  earth:
+    x: -0.5
+    z: -0.5
+    radiusX: 21504
+    radiusZ: 10752
+    wrapping: true
