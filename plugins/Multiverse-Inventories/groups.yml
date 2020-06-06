@@ -10,3 +10,8 @@ groups:
     - world_nether
     shares:
     - all
+  earth:
+    worlds:
+    - earth
+    shares:
+    - all
