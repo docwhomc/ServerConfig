@@ -190,7 +190,7 @@ worlds:
   earth:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: earth
     color: WHITE
     style: NORMAL
     pvp: 'true'
