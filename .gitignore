@@ -40,6 +40,9 @@ userdata/
 # Dynmap username-IP-address correspondence
 /plugins/dynmap/ids-by-ip.txt
 
+# Dynmap pending renderings
+/plugins/dynmap/*.pending
+
 # Karma data
 karma.yml
 
