@@ -36,10 +36,15 @@ userdata/
 # Dynmap tiles
 /plugins/dynmap/web/tiles/*/
 !/plugins/dynmap/web/tiles/_markers_/
+
+# Dynmap username-IP-address correspondence
 /plugins/dynmap/ids-by-ip.txt
 
 # Karma data
 karma.yml
+
+# LuckPerms
+!/plugins/LuckPerms/contexts.json
 
 # Player maps
 playermap.yml
@@ -48,9 +53,3 @@ usermap.csv
 # Bakcups
 *.db.bak
 backup/
-
-##################
-# Exempted files #
-##################
-
-!/plugins/LuckPerms/contexts.json
