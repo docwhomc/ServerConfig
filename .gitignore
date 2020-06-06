@@ -36,6 +36,7 @@ userdata/
 # Dynmap tiles
 /plugins/dynmap/web/tiles/*/
 !/plugins/dynmap/web/tiles/_markers_/
+/plugins/dynmap/ids-by-ip.txt
 
 # Karma data
 karma.yml

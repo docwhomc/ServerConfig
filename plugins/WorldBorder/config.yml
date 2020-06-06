@@ -25,3 +25,10 @@ worlds:
     radiusX: 21504
     radiusZ: 10752
     wrapping: true
+  hub:
+    x: 0.5
+    z: 0.5
+    radiusX: 512
+    radiusZ: 512
+    wrapping: false
+    shape-round: true
