@@ -33,6 +33,10 @@ flatfile/
 data/
 userdata/
 
+# Dynmap tiles
+/plugins/dynmap/web/tiles/*/
+!/plugins/dynmap/web/tiles/_markers_/
+
 # Karma data
 karma.yml
 
