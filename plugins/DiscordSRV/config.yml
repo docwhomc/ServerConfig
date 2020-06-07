@@ -2,7 +2,7 @@
 # Need help? Join our Discord, https://discordsrv.com/discord
 
 # Don't touch pls
-ConfigVersion: 1.19.0
+ConfigVersion: 1.19.1-SNAPSHOT
 
 # Bot token; don't know what this is? Look at the video on the plugin page for instructions
 BotToken: "BOTTOKEN"
