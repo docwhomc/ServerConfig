@@ -1,1 +1,2 @@
 server.properties filter=rm-datetime
+/plugins/DiscordSRV/config.yml filter=bot-token
