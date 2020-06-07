@@ -236,12 +236,12 @@ town:
   # Minimum number of plots any towns home plot must be from the next town.
   # Does not affect towns which are in the same nation.
   # This will prevent someone founding a town right on your doorstep
-  min_distance_from_town_homeblock: '5'
+  min_distance_from_town_homeblock: '10'
  
   # Minimum number of plots an outpost must be from any other town's plots.
   # Useful when min_plot_distance_from_town_plot is set to near-zero to allow towns to have claims
   # near to each other, but want to keep outposts away from towns.
-  min_distance_for_outpost_from_plot: '5'
+  min_distance_for_outpost_from_plot: '10'
  
   # Maximum distance between homeblocks.
   # This will force players to build close together.
@@ -357,7 +357,7 @@ global_town_settings:
   # Players within their town or allied towns will regenerate half a heart after every health_regen_speed seconds.
   health_regen:
     speed: 3s
-    enable: 'true'
+    enable: 'false'
   # Allow towns to claim outposts (a townblock not connected to town).
   allow_outposts: 'true'
   # When set to true outposts can be limited by the townOutpostLimit value of the Town Levels and
@@ -1143,7 +1143,7 @@ jail:
 bank:
   # If true players will only be able to use /t deposit, /t withdraw, /n deposit & /n withdraw while inside bank plots belonging to the town or nation capital respectively.
   # Home plots will also allow deposit and withdraw commands.
-  is_banking_limited_to_bank_plots: 'false'
+  is_banking_limited_to_bank_plots: 'true'
  
  
   ############################################################
