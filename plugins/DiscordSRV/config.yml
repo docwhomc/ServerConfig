@@ -11,13 +11,13 @@ BotToken: "BOTTOKEN"
 # syntax is Channels: {"in-game channel name": "numerical channel ID from Discord", "another in-game channel name": "another numerical channel ID from Discord"}
 # The first channel pair specified in this config option will be the "main" channel, used for sending player joins/quits/deaths/achievements/etc
 #
-Channels: {"global": "000000000000000000"}
+Channels: {"global": "719010900551663647"}
 
 # Console channel numerical ID (NOT NAME), leave blank to disable the console channel all together
-DiscordConsoleChannelId: "000000000000000000"
+DiscordConsoleChannelId: "719008289261748295"
 
 # Invitation link shown to players when using /discord and on the message shown to unlinked players when linking is enforced
-DiscordInviteLink: "discord.gg/changethisintheconfig.yml"
+DiscordInviteLink: "discord.gg/UUvdU2M"
 
 # Debug options, don't touch unless needed
 #
@@ -161,7 +161,7 @@ DiscordConsoleChannelLevels: [info, warn, error]
 # DiscordChatChannelConsoleCommandExpiration: time in seconds until a sent command output is automatically removed by the bot. set to 0 to disable expiration.
 # DiscordChatChannelConsoleCommandExpirationDeleteRequest: whether or not to delete the message of the person that originally issued the command
 #
-DiscordChatChannelConsoleCommandEnabled: true
+DiscordChatChannelConsoleCommandEnabled: false
 DiscordChatChannelConsoleCommandNotifyErrors: true
 DiscordChatChannelConsoleCommandPrefix: "!c"
 DiscordChatChannelConsoleCommandRolesAllowed: ["Developer", "Owner"]
@@ -169,7 +169,7 @@ DiscordChatChannelConsoleCommandWhitelist: ["say", "lag", "tps"]
 DiscordChatChannelConsoleCommandWhitelistBypassRoles: ["Owner", "Developer"]
 DiscordChatChannelConsoleCommandWhitelistActsAsBlacklist: false
 DiscordChatChannelConsoleCommandExpiration: 0
-DiscordChatChannelConsoleCommandExpirationDeleteRequest: true
+DiscordChatChannelConsoleCommandExpirationDeleteRequest: false
 
 # Chat channel player list command
 # All the config stuff for the player list command
@@ -179,7 +179,7 @@ DiscordChatChannelConsoleCommandExpirationDeleteRequest: true
 # DiscordChatChannelListCommandExpiration: time in seconds until a sent player list message is automatically removed by the bot. set to 0 to disable expiration.
 # DiscordChatChannelListCommandExpirationDeleteRequest: whether or not to delete the message of the person that originally requested for the player list
 #
-DiscordChatChannelListCommandEnabled: true
+DiscordChatChannelListCommandEnabled: false
 DiscordChatChannelListCommandMessage: "playerlist"
 DiscordChatChannelListCommandExpiration: 10
 DiscordChatChannelListCommandExpirationDeleteRequest: true
@@ -212,7 +212,7 @@ ChannelTopicUpdaterRateInMinutes: 10
 # If you do not want any canned responses, set this to just {}
 # PlaceholderAPI placeholders are supported for the values
 #
-DiscordCannedResponses: {"!ip": "yourserveripchange.me", "!site": "http://yoursiteurl.net"}
+DiscordCannedResponses: {} #{"!ip": "yourserveripchange.me", "!site": "http://yoursiteurl.net"}
 
 # Minecraft to Discord account linking
 # These are the config options pertaining to how linking a Minecraft account to a Discord account functions
@@ -233,7 +233,7 @@ DiscordCannedResponses: {"!ip": "yourserveripchange.me", "!site": "http://yoursi
 #
 MinecraftDiscordAccountLinkedConsoleCommands: ["", "", ""]
 MinecraftDiscordAccountUnlinkedConsoleCommands: ["", "", ""]
-MinecraftDiscordAccountLinkedRoleNameToAddUserTo: "Linked"
+MinecraftDiscordAccountLinkedRoleNameToAddUserTo: "Player"
 MinecraftDiscordAccountLinkedAllowRelinkBySendingANewCode: false
 
 # Server watchdog
