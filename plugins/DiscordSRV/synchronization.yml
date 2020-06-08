@@ -26,7 +26,20 @@ NicknameSynchronizationFormat: "%displayname%"
 # GroupRoleSynchronizationOnLink: whether or not to resync when a player links
 # GroupRoleSynchronizationCycleTime: amount of minutes between repeatedly triggering synchronization for all online players
 #
-GroupRoleSynchronizationGroupsAndRolesToSync: {"owner": "712421449549480047", "admin": "712421471246614558", "designer" : "718970714413072396", "mod" : "712421491412566068", "dev" : "712507108314185728", "support" : "712421518822604823", "support" : "712421544336293928", "staff" : "712421544336293928", "streamer" : "715009046096379987", "dev-tester" : "717421309306601502", "alpha-tester" : "717421524423934152", "beta-tester" : "717421584394092654", "tester" : "717421639846985831"}
+GroupRoleSynchronizationGroupsAndRolesToSync: {
+    "Owner": "712421449549480047",
+    "Admin": "712421471246614558",
+    "Designer" : "718970714413072396",
+    "Mod" : "712421491412566068",
+    "Dev" : "712507108314185728",
+    "Support" : "712421518822604823",
+    "Staff" : "712421544336293928",
+    "Streamer" : "715009046096379987",
+    "DevTester" : "717421309306601502",
+    "AlphaTester" : "717421524423934152",
+    "BetaTester" : "717421584394092654",
+    "Tester" : "717421639846985831"
+}
 GroupRoleSynchronizationMinecraftIsAuthoritative: true
 GroupRoleSynchronizationEnableDenyPermission: false
 GroupRoleSynchronizationPrimaryGroupOnly: false
