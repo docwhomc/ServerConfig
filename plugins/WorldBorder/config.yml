@@ -32,3 +32,21 @@ worlds:
     radiusZ: 512
     wrapping: false
     shape-round: true
+  world:
+    x: -0.5
+    z: -0.5
+    radiusX: 4096
+    radiusZ: 4096
+    wrapping: false
+  world_nether:
+    x: -0.5
+    z: -0.5
+    radiusX: 512
+    radiusZ: 512
+    wrapping: false
+  world_the_end:
+    x: -0.5
+    z: -0.5
+    radiusX: 512
+    radiusZ: 512
+    wrapping: false
