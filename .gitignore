@@ -56,3 +56,6 @@ usermap.csv
 # Bakcups
 *.db.bak
 backup/
+
+# "Secret" information (e.g. tokens) removed from files by git filters
+.filter_secret__*
