@@ -166,7 +166,7 @@ DiscordChatChannelConsoleCommandNotifyErrors: true
 DiscordChatChannelConsoleCommandPrefix: "!c"
 DiscordChatChannelConsoleCommandRolesAllowed: ["Owner"]
 DiscordChatChannelConsoleCommandWhitelist: ["say", "lag", "tps"]
-DiscordChatChannelConsoleCommandWhitelistBypassRoles: ["Owner", "Developer"]
+DiscordChatChannelConsoleCommandWhitelistBypassRoles: ["Owner"]
 DiscordChatChannelConsoleCommandWhitelistActsAsBlacklist: false
 DiscordChatChannelConsoleCommandExpiration: 0
 DiscordChatChannelConsoleCommandExpirationDeleteRequest: false
