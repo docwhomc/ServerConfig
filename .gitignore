@@ -33,6 +33,9 @@ flatfile/
 data/
 userdata/
 
+# DungeonsXL maps directory
+/plugins/DungeonsXL/maps/
+
 # Dynmap tiles
 /plugins/dynmap/web/tiles/*/
 !/plugins/dynmap/web/tiles/_markers_/
