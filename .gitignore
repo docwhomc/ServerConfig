@@ -36,6 +36,9 @@ userdata/
 # DungeonsXL maps directory
 /plugins/DungeonsXL/maps/
 
+# DungeonsXL players directory
+/plugins/DungeonsXL/players/
+
 # Dynmap tiles
 /plugins/dynmap/web/tiles/*/
 !/plugins/dynmap/web/tiles/_markers_/
