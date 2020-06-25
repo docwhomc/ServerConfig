@@ -1,8 +1,8 @@
 version:
   # This is the current version of Towny.  Please do not edit.
-  version: 0.96.1.11
+  version: 0.96.1.14
   # This is for showing the changelog on updates.  Please do not edit.
-  last_run_version: 0.96.1.11
+  last_run_version: 0.96.1.14
 # The language file you wish to use
 language: english.yml
  
@@ -467,9 +467,6 @@ global_town_settings:
   display_xyz_instead_of_towny_coords: 'false'
   # If set to true the /town list command will list randomly, rather than by whichever comparator is used, hiding resident counts.
   display_town_list_randomly: 'false'
-  # The ranks to be given preference when assigning a new mayor, listed in order of descending preference.  All ranks should be as defined in `townyperms.yml`.
-  # For example, to give a `visemayor` preference over an `assistant`, change this parameter to `visemayor,assistant`.
-  order_of_mayoral_succession: assistant,visemayor
  
  
   ############################################################
