@@ -183,7 +183,7 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: NETHER
-    seed: '-4371095498436113496'
+    seed: '6229467427659147091'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
