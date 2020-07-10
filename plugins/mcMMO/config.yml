@@ -1,7 +1,7 @@
 
 #
 #  mcMMO configuration
-#  Last updated on 2.1.130-SNAPSHOT-b${BUILD_NUMBER}
+#  Last updated on 2.1.132-b${BUILD_NUMBER}
 #
 #####
 #
@@ -441,6 +441,15 @@ Bonus_Drops:
         Rose_Bush: true
         Peony: true
         Lily_Of_The_Valley: true
+        Weeping_Vines: true
+        Warped_Roots: true
+        Nether_Wart_Block: true
+        Warped_Wart_Block: true
+        Shroomlight: true
+        Crimson_Roots: true
+        Twisting_Vines: true
+        Warped_Stem: true
+        Crimson_Stem: true
     Mining:
         Warped_Nylium: true
         Crimson_Nylium: true
@@ -475,6 +484,17 @@ Bonus_Drops:
         Stone: true
         Cobblestone: true
         Redstone_Dust: true
+        Gilded_Blackstone: true
+        Nether_Gold_Ore: true
+        Nether_Bricks: true
+        Red_Nether_Bricks: true
+        Crying_Obsidian: true
+        Blackstone: true
+        Polished_Basalt: true
+        Cracked_Nether_Bricks: true
+        Basalt: true
+        Chiseled_Nether_Bricks: true
+        Chain: true
     Woodcutting:
         Shroomlight: true
         Crimson_Stem: true
@@ -493,6 +513,10 @@ Bonus_Drops:
         Jungle_Log: true
         Spruce_Wood: true
         Spruce_Log: true
+        Warped_Hyphae: true
+        Stripped_Crimson_Hyphae: true
+        Crimson_Hyphae: true
+        Stripped_Warped_Hyphae: true
 #
 #  Settings for commands
 ###

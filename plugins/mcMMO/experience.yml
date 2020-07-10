@@ -1,7 +1,7 @@
 
 #
 #  Experience configuration
-#  Last updated on 2.1.130-SNAPSHOT-b${BUILD_NUMBER}
+#  Last updated on 2.1.132-b${BUILD_NUMBER}
 #
 #  Configure the experience formula and experience settings here.
 #
@@ -428,6 +428,7 @@ Experience_Values:
         Blackstone: 55
         Cracked_Nether_Bricks: 50
         Gilded_Blackstone: 200
+        Red_Nether_Bricks: 50
     Repair:
         Base: 1000.0
         Wood: 0.6
@@ -438,6 +439,7 @@ Experience_Values:
         Leather: 1.6
         String: 1.8
         Other: 1.5
+        Netherite: 6.0
     Smelting:
         Ancient_Debris: 200
         Coal_Ore: 10
@@ -531,3 +533,4 @@ Experience_Values:
             Zombified_Piglin: 3.0
             Strider: 1.2
             Zoglin: 2.5
+            Piglin_Brute: 4.5
